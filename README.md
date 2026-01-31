@@ -9,22 +9,6 @@ This repository is the official implementation of DRIFT.
 - **Merge Topology**: Road geometry creates conflict zones with elevated risk
 - **Interpretable Sources**: Clear decomposition into Q_veh, Q_occ, Q_merge
 
-## Mathematical Model
-
-The risk field R(x,t) evolves according to:
-
-
-$τ ∂²R/∂t² + ∂R/∂t + ∇·(v_eff R) = ∇·(D∇R) + Q(x,t) - λR$
-
-where:
-- **τ∂²R/∂t²**: Telegrapher inertia (wave-like, finite propagation speed)
-- **∂R/∂t**: First-order relaxation
-- **∇·(v_eff R)**: Advection by flow + topology drift
-- **∇·(D∇R)**: Diffusion (enhanced in occlusion)
-- **Q(x,t)**: Source = Q_veh + Q_occ + Q_merge
-- **-λR**: Decay/forgetting
-
-
 ## Source Terms
 
 | Source | Description |
