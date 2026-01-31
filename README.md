@@ -1,9 +1,38 @@
 # DRIFT: Dynamic Risk Inference via Field Transport for highway interactive driving scenarios
 This repository is the official implementation of DRIFT.
 
-DRIFT is a unified field-theoretic framework for modeling and propagating traffic risk in complex driving scenarios. We formulate risk as a spatiotemporal field R(x,t) governed by an advection-diffusion-telegrapher partial differential equation (PDE), where risk is injected through three physically-motivated source terms: 
-- vehicle-induced risk modeled via anisotropic Gaussian kernels derived from Gaussian Vector Fields (GVF), capturing relative motion and interaction intensity;
-- occlusion-induced latent hazards representing unobserved threats in sensor shadow regions behind large vehicles such as truck-trailers; and
-- merge pressure encoding topological conflict zones where lane-change maneuvers create elevated collision potential. 
+## Key Features
 
-The risk field propagates through space via advection along the traffic flow and topology-induced drift, spreads through diffusion representing spatial uncertainty, and exhibits wave-like dynamics through the telegrapher term that enforces finite propagation speed. DRIFT provides a principled, interpretable approach to risk assessment that naturally handles occlusion reasoning, multi-vehicle interactions, and road topology—enabling safer motion planning for autonomous vehicles in challenging scenarios such as highway merging with limited visibility.
+- **Unified PDE Framework**: Single equation captures advection, diffusion, and wave-like propagation
+- **GVF-based Vehicle Interaction**: Anisotropic Gaussian kernels model relative motion risk
+- **Occlusion Reasoning**: Shadow regions behind trucks inject latent hazard
+- **Merge Topology**: Road geometry creates conflict zones with elevated risk
+- **Interpretable Sources**: Clear decomposition into Q_veh, Q_occ, Q_merge
+
+## Mathematical Model
+
+The risk field R(x,t) evolves according to:
+
+```
+τ ∂²R/∂t² + ∂R/∂t + ∇·(v_eff R) = ∇·(D∇R) + Q(x,t) - λR
+```
+
+where:
+- **τ∂²R/∂t²**: Telegrapher inertia (wave-like, finite propagation speed)
+- **∂R/∂t**: First-order relaxation
+- **∇·(v_eff R)**: Advection by flow + topology drift
+- **∇·(D∇R)**: Diffusion (enhanced in occlusion)
+- **Q(x,t)**: Source = Q_veh + Q_occ + Q_merge
+- **-λR**: Decay/forgetting
+
+<p align="center">
+  <img src="output/drift_source_components.png" alt="Source Decomposition" width="900">
+</p>
+
+## Source Terms
+
+| Source | Description |
+|--------|-------------|
+| Q_veh | Vehicle-induced risk using GVF-style anisotropic Gaussians weighted by TTC, relative speed, and vehicle class |
+| Q_occ | Occlusion hazard in sensor shadow behind large vehicles; higher at lane centers and truck edges where cut-ins emerge |
+| Q_merge | Merge conflict pressure; intensifies toward gore point with topology-driven drift |
