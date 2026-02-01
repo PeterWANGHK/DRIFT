@@ -22,3 +22,4 @@ see another repo: https://github.com/PeterWANGHK/Benchmark-RiskField.git
 
 ## Demonstration example:
 ![Advection effect](/assets/drift_advection_effect.gif)
+![Advection effect](/assets/drift_advection_pde.gif)
