@@ -23,4 +23,4 @@ python drift_visualization.py --output ./output --frames 60 --fps 6
 #   --frames        Number of animation frames (default: 80)
 #   --fps           Frames per second (default: 8)
 ```
-![example_merging](/assests/drift_advection_pde.gif)
+![example_merging](demonstration/assests)
