@@ -25,5 +25,7 @@ python drift_visualization.py --output ./output --frames 60 --fps 6
 ```
 ### demonstrations of the advection-diffusion effects with merging topology and occlusion using the empirical PDE parameters (pending fine-tuning):
 ![effect](/assets/drift_advection_correct.gif)
-### demonstration of advection-diffusion effects with occlusion-aware risk modeling in occluded zone
+### demonstration of advection-diffusion effects with occlusion-aware risk modeling in occluded zone (view with relative (x, t))
 ![effect](/assets/drift_advection_pde.gif)
+### demonstration of advection-diffusion effects with occlusion-aware risk modeling in occluded zone (view with absolute (x, t))
+![effect](/assets/drift_diffusion_pde.gif)
