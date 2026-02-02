@@ -24,4 +24,4 @@ python drift_visualization.py --output ./output --frames 60 --fps 6
 #   --fps           Frames per second (default: 8)
 ```
 ### demonstrations of the advection effects using the empirical PDE parameters (pending fine-tuning):
-![Advection effect](/assets/drift_advection_pde.gif)
+![Advection effect](/assets/drift_advection_correct.gif)
