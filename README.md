@@ -25,7 +25,7 @@ see another repo: https://github.com/PeterWANGHK/Benchmark-RiskField.git
 1. **Install dependencies:**
    ```bash
    git clone https://github.com/PeterWANGHK/DRIFT.git
-   pip install numpy scipy matplotlib imageio
+   pip install numpy scipy matplotlib imageio loguru
    ```
 
 2. **Run verification:**
