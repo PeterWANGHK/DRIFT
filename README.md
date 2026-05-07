@@ -1,4 +1,4 @@
-# DRIFT: Dynamic Risk Inference via Field Transport for highway interactive driving scenarios
+# DRIFT: Driving Risk Inference via Field Transmission for Human-like Autonomous Driving
 This repository is the official implementation of DRIFT.
 
 ## Key Features
