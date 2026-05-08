@@ -9,7 +9,7 @@ This repository is the official implementation of the paper "*DRIFT: Driving Ris
 - **Merge Topology**: Road geometry creates conflict zones with elevated risk
 - **Interpretable Sources**: Clear decomposition into Q_veh, Q_occ, Q_merge
 
-![methodology](/assets/dfig1_01.png)
+![methodology](/assets/fig1_01.png)
 
 ## Source Terms
 
