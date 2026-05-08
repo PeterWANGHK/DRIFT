@@ -1,5 +1,5 @@
 # DRIFT: Driving Risk Inference via Field Transmission for Human-like Autonomous Driving
-This repository is the official implementation of DRIFT.
+This repository is the official implementation of the paper "*DRIFT: Driving Risk Inference via Field Transmission for Human-like Autonomous Driving*", accepted for publication at The IEEE International Conference on Intelligent Transportation Systems (ITSC) 2026
 
 ## Key Features
 
