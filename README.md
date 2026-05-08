@@ -65,3 +65,6 @@ python drift_pde_visualization.py --ablation --frames 70 --fps 8
 ```
 
 ![Group effect_occlusion](/assets/drift_ablation_study.gif)
+
+### evaluation in different scenarios using BEV datasets:
+![BEV overlay](/assets/drift_benchmark_1.jpg)
